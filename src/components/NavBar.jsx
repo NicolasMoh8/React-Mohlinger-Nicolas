@@ -1,19 +1,33 @@
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import { NavLink } from 'react-router-dom';
 import { CartWidget } from './CartWidget';
 
+import data from '../data/MOCK_DATA.json';
 
-export const NavBar =()=> (
+
+const tipos = data.map(articulo => articulo.tipo)
+
+const unique = new Set(tipos)
+
+export const NavBar = () => (
     <Navbar bg="light" variant="light">
         <Container>
-            <Navbar.Brand href="My_Friendly_Pet">My Friendly Pet</Navbar.Brand>
-            <Nav className="me-auto">
-                <Nav.Link href="Perros">Perros</Nav.Link>
-                <Nav.Link href="Gatos">Gatos</Nav.Link>
-                <Nav.Link href="Accesorios">Accesorios</Nav.Link>
+
+            <Nav>
+                <NavLink style={{textDecoration: 'none'}}to={`/`}>
+                    <Navbar.Brand >My Friendly Pet</Navbar.Brand>
+                </NavLink>
             </Nav>
-            <CartWidget/>
+            <Nav className="me-auto">
+                {[...unique].map(item => (
+                    <NavLink key={item} className="nav-link" to={`/tipo/${item}`} >
+                        {item}
+                    </NavLink>
+                ))}
+            </Nav>
+            <CartWidget />
         </Container>
-    </Navbar>         
+    </Navbar>
 )

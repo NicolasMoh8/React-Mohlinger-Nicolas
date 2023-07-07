@@ -1,0 +1,83 @@
+[
+    {
+        "id": 1,
+        "nombre": "Sieger Criadores All in One",
+        "kilos": "20 kilos",
+        "etapa": "Adulto",
+        "tipo": "Perro",
+        "precio": 10000,
+        "imagen": "https://sieger.com.ar/wp-content/uploads/2022/09/Sieger-All-In-One-Criadores.png"
+    },
+    {
+        "id": 2,
+        "nombre": "Sieger Adult",
+        "kilos": "15 kilos",
+        "etapa": "Adulto",
+        "tipo": "Perro",
+        "precio": 8000,
+        "imagen": "https://sieger.com.ar/wp-content/uploads/2022/09/adult-medium-and-large.png"
+    },
+    {
+        "id": 3,
+        "nombre": "Sieger Puppy",
+        "kilos": "15 kilos",
+        "etapa": "Cachorro",
+        "tipo": "Perro",
+        "precio": 9000,
+        "imagen": "https://sieger.com.ar/wp-content/uploads/2022/09/Sieger-Puppy-Medium-Large.png"
+    },
+    {
+        "id": 4,
+        "nombre": "Maxxium Adulto",
+        "kilos": "20 kilos",
+        "etapa": "Adulto",
+        "tipo": "Perro",
+        "precio": 8500,
+        "imagen": "https://www.alican.com.ar/wp-content/uploads/2018/04/Maxxium_Perros_Adultos_new.png"
+    },
+    {
+        "id": 5,
+        "nombre": "Maxxium Cachorro",
+        "kilos": "15 kilos",
+        "etapa": "Cachorro",
+        "tipo": "Perro",
+        "precio": 7500,
+        "imagen": "https://www.alican.com.ar/wp-content/uploads/2018/04/Maxxium_Perros_Cachorros.png"
+    },
+    {
+        "id": 6,
+        "nombre": "Proterline Adulto",
+        "kilos": "22 kilos",
+        "etapa": "Adulto",
+        "tipo": "Perro",
+        "precio": 5000,
+        "imagen": "https://www.alican.com.ar/wp-content/uploads/2019/07/render-proterline-adultos-906x1024.png"
+    },
+    {
+        "id": 7,
+        "nombre": "Proterline Cachorro",
+        "kilos": "15 kilos",
+        "etapa": "Cachorro",
+        "tipo": "Perro",
+        "precio": 5500,
+        "imagen": "https://www.alican.com.ar/wp-content/uploads/2019/07/Render-proterline-cachorros-906x1024.png"
+    },
+    {
+        "id": 8,
+        "nombre": "7 Vidas Carne y Pollo",
+        "kilos": "10 kilos",
+        "etapa": "Adulto y Cachorro",
+        "tipo": "Gato",
+        "precio": 3000,
+        "imagen": "https://www.alican.com.ar/wp-content/uploads/2019/02/7vidas-carneweb.png"
+    },
+    {
+        "id": 9,
+        "nombre": "7 Vidas Salmon",
+        "kilos": "10 kilos",
+        "etapa": "Adulto y Cachorro",
+        "tipo": "Gato",
+        "precio": 3000,
+        "imagen": "https://www.alican.com.ar/wp-content/uploads/2019/08/7vidas-salmonweb.png"
+    }
+]

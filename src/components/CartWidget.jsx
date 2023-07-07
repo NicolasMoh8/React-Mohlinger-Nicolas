@@ -1,5 +1,5 @@
 import cart from './assets/carrito.png'
-const styles ={
+const styles = {
     img: {
         height: "2rem",
         width: "auto",
@@ -10,10 +10,10 @@ const styles ={
     }
 }
 
-export const CartWidget =()=>(
+export const CartWidget = () => (
     <>
-    <img src={cart} style={styles.img} alt="carrito" /> 
-    <span style={styles.span}>0</span>
+        <img src={cart} style={styles.img} alt="carrito" />
+        <span style={styles.span}>0</span>
     </>
 )
 
