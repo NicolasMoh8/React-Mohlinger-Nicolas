@@ -12,7 +12,7 @@ const tipos = data.map(articulo => articulo.tipo)
 const unique = new Set(tipos)
 
 export const NavBar = () => (
-    <Navbar bg="light" variant="light">
+    <Navbar className='border border-dark' bg="light " variant="light">
         <Container>
 
             <Nav>

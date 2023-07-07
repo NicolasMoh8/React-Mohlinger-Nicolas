@@ -25,7 +25,7 @@ export const ItemDetailContainer = (props) => {
 }, []);
 return (
     <Container >
-        <h1 className='mt-5 bg-success d-flex align-items-center justify-content-center' style={styles.h1}>Detalle</h1>
+        <h1 className='mt-5 bg-light text-dark border border-dark d-flex align-items-center justify-content-center' style={styles.h1}>Detalle</h1>
         {product.length === 0 ? (
             <div>Cargando...</div>
         ) : (
