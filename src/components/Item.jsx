@@ -22,6 +22,7 @@ export const MyCard = ({ articulo }) => (
                 <Button variant="light">Ir</Button>
             </Link>
 
-        </Card.Body>
+        </Card.Body>        
     </Card>
+    
 )

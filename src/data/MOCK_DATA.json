@@ -6,6 +6,7 @@
         "etapa": "Adulto",
         "tipo": "Perro",
         "precio": 10000,
+        "stock": 5,
         "imagen": "https://sieger.com.ar/wp-content/uploads/2022/09/Sieger-All-In-One-Criadores.png"
     },
     {
@@ -15,6 +16,7 @@
         "etapa": "Adulto",
         "tipo": "Perro",
         "precio": 8000,
+        "stock": 8,
         "imagen": "https://sieger.com.ar/wp-content/uploads/2022/09/adult-medium-and-large.png"
     },
     {
@@ -24,6 +26,7 @@
         "etapa": "Cachorro",
         "tipo": "Perro",
         "precio": 9000,
+        "stock": 3,
         "imagen": "https://sieger.com.ar/wp-content/uploads/2022/09/Sieger-Puppy-Medium-Large.png"
     },
     {
@@ -33,6 +36,7 @@
         "etapa": "Adulto",
         "tipo": "Perro",
         "precio": 8500,
+        "stock": 10,
         "imagen": "https://www.alican.com.ar/wp-content/uploads/2018/04/Maxxium_Perros_Adultos_new.png"
     },
     {
@@ -42,6 +46,7 @@
         "etapa": "Cachorro",
         "tipo": "Perro",
         "precio": 7500,
+        "stock": 7,
         "imagen": "https://www.alican.com.ar/wp-content/uploads/2018/04/Maxxium_Perros_Cachorros.png"
     },
     {
@@ -51,6 +56,7 @@
         "etapa": "Adulto",
         "tipo": "Perro",
         "precio": 5000,
+        "stock": 9,
         "imagen": "https://www.alican.com.ar/wp-content/uploads/2019/07/render-proterline-adultos-906x1024.png"
     },
     {
@@ -60,6 +66,7 @@
         "etapa": "Cachorro",
         "tipo": "Perro",
         "precio": 5500,
+        "stock": 3,
         "imagen": "https://www.alican.com.ar/wp-content/uploads/2019/07/Render-proterline-cachorros-906x1024.png"
     },
     {
@@ -69,6 +76,7 @@
         "etapa": "Adulto y Cachorro",
         "tipo": "Gato",
         "precio": 3000,
+        "stock": 6,
         "imagen": "https://www.alican.com.ar/wp-content/uploads/2019/02/7vidas-carneweb.png"
     },
     {
@@ -78,6 +86,7 @@
         "etapa": "Adulto y Cachorro",
         "tipo": "Gato",
         "precio": 3000,
+        "stock": 8,
         "imagen": "https://www.alican.com.ar/wp-content/uploads/2019/08/7vidas-salmonweb.png"
     }
 ]

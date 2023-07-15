@@ -17,23 +17,25 @@ export const ItemDetailContainer = (props) => {
 
     useEffect(() => {
         const promise = new Promise((resolve, reject) => {
-            setTimeout(() => resolve(data), 2000)
+            setTimeout(() => {
+                resolve(data)
+            }, 2000)
         })
-        promise.then((data) => {
-            setProduct(data[1])
+        promise.then(data => {
+            setProduct(data[3])
         })
-}, []);
-return (
-    <Container >
-        <h1 className='mt-5 bg-light text-dark border border-dark d-flex align-items-center justify-content-center' style={styles.h1}>Detalle</h1>
-        {product.length === 0 ? (
-            <div>Cargando...</div>
-        ) : (
-            <ItemDetail articulo={product} />
-        )
+    }, []);
+    return (
+        <Container >
+            <h1 className='mt-5 bg-light text-dark border border-dark d-flex align-items-center justify-content-center' style={styles.h1}>Detalle</h1>
+            {product.length === 0 ? (
+                <div>Cargando...</div>
+            ) : (
+                <ItemDetail articulo={product} />
+            )
 
-        }
-        
-    </Container>
-);
+            }
+
+        </Container>
+    );
 };
