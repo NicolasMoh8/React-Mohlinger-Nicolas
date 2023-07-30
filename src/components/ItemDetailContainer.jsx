@@ -1,41 +1,24 @@
 import { useState, useEffect } from 'react';
-
+import { getFirestore, doc, getDoc } from "firebase/firestore";
 import Container from 'react-bootstrap/Container';
-import data from '../data/MOCK_DATA.json';
+import { useParams } from 'react-router-dom';
 import { ItemDetail } from '../components/ItemDetail';
 
-const styles = {
-    h1: {
-        color: "white",
-    },
-};
-
-export const ItemDetailContainer = (props) => {
+export const ItemDetailContainer = () => {
     const [product, setProduct] = useState([]);
-
-
+    const { id } = useParams();
 
     useEffect(() => {
-        const promise = new Promise((resolve, reject) => {
-            setTimeout(() => {
-                resolve(data)
-            }, 2000)
-        })
-        promise.then(data => {
-            setProduct(data[3])
-        })
-    }, []);
+        const db = getFirestore();
+        const refDoc = doc(db, "items", id);
+        getDoc(refDoc).then(snapshot =>
+            setProduct({ id: snapshot.id, ...snapshot.data() })
+        );
+    }, [id]);
+
     return (
         <Container >
-            <h1 className='mt-5 bg-light text-dark border border-dark d-flex align-items-center justify-content-center' style={styles.h1}>Detalle</h1>
-            {product.length === 0 ? (
-                <div>Cargando...</div>
-            ) : (
-                <ItemDetail articulo={product} />
-            )
-
-            }
-
+            <ItemDetail articulo={product} />
         </Container>
     );
-};
+}

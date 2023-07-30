@@ -1,70 +1,22 @@
-# Getting Started with Create React App
+# My Friendly Pet - Aplicación de tienda de mascotas de e-commerce.
+My Friendly Pet es una aplicación web de e-commerce que permite a los usuarios generar órdenes de compra de alimento balanceado para mascotas.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Esta construida con React.js y se integra con Firebase y Firestore para almacenar las órdenes de compra y datos del usuario.
 
-## Available Scripts
+# Características:
 
-In the project directory, you can run:
+Contiene una página de inicio donde se muestra un listado de productos de alimento balanceado para mascotas disponible. Los usuarios pueden navegar a través de los productos y ver sus detalles.
 
-### `npm start`
+Al hace click en un producto, el usuario accede a la página de detalles del producto, donde puede ver una descripción detalalda, el precio y otra incformación relevante. Al seleccionar la cantidad que desea y presionando en "Agregar al carrito" le muestra el precio total. Luego tiene la opcion de finalizar la compra o seguir comprando.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+En el carrito, el usuario puede revisar los productos seleccionados, pudiendo eliminar el que ya no desea o limpiar el carrito por completo, dandole la posibilidad en éste último caso, de volver a la página de inicio y continuar comprando.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Una vez que decide finalizar la compra, precionando en "Checkout", el usuario debe completar el formulario colocando su nombre, número de teléfono y dirección de correo electrónico. El formulario incluye una validación para garantizar que todos los campo estén completos. Luego el usuario hace click en el boton "Enviar" para enviar su pedido. 
 
-### `npm test`
+La aplicación guarda la información del pedido, incluida la propiciada por el usuario, los articulos del carrito y el precio total en la base de datos de Firestore.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Al enviar el pedido de forma correcta, el usuario recibe dicha confirmación y le brinda el ID de pedido.
 
-### `npm run build`
+Por último, al enviar con éxito del pedido, la aplicación borra los datos del carrito.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

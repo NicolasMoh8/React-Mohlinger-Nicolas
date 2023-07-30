@@ -1,4 +1,3 @@
-
 import Container from 'react-bootstrap/Container';
 import { MyCard } from './Item';
 
@@ -10,5 +9,4 @@ export const ItemList = ({ product }) => (
             product.map(articulo => <MyCard key={articulo.id} articulo={articulo} />)
         )}
     </Container>
-
 )

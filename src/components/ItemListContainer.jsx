@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
-import data from '../data/MOCK_DATA.json';
 import { ItemList } from '../components/ItemList';
+import { getFirestore, collection, getDocs, query, where } from "firebase/firestore";
 
 const styles = {
     h1: {
@@ -12,20 +12,18 @@ const styles = {
 
 export const ItemListContainer = (props) => {
     const [product, setProduct] = useState([]);
-
     const { id } = useParams()
 
     useEffect(() => {
-        const promise = new Promise((resolve, reject) => {
-            setTimeout(() => resolve(data), 2000)
-        })
-        promise.then((data) => {
-            if (id) {
+        const db = getFirestore()
+        const refDoc = id ? query(collection(db, "items"),
+            where("categoryId", "==", id)) : collection(db, "items")
+        getDocs(refDoc).then(snapshot => {
+            if (snapshot.size === 0) setProduct([])
+            else {
                 setProduct(
-                    data.filter(product => product.tipo === id)
+                    snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }))
                 )
-            } else {
-                setProduct(data)
             }
         })
     }, [id]);

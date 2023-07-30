@@ -4,10 +4,9 @@ import { NavBar } from './components/NavBar';
 import { ItemListContainer } from './components/ItemListContainer';
 import { ItemDetailContainer } from './components/ItemDetailContainer';
 import { Cart } from './components/Cart';
+import { Checkout } from './components/Checkout';
 
 import { CartProvider } from './context/CartContext';
-
-
 
 export default function App() {
   return (
@@ -31,6 +30,10 @@ export default function App() {
             <Route
               path="/cart"
               element={<Cart />}
+            />
+            <Route
+              path="/checkout"
+              element={<Checkout />}
             />
           </Routes>
         </CartProvider>

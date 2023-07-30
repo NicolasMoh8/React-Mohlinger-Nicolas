@@ -1,33 +1,41 @@
+import { useState, useEffect } from "react";
 import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { NavLink } from 'react-router-dom';
 import { CartWidget } from './CartWidget';
+import { getFirestore, collection, getDocs } from 'firebase/firestore';
 
-import data from '../data/MOCK_DATA.json';
+export const NavBar = () => {
+    const [prodNav, setProdNav] = useState([])
+    useEffect(() => {
+        const db = getFirestore()
+        const refDoc = collection(db, "items")
+        getDocs(refDoc).then(snapshot => {
+            if (snapshot.size === 0) { }
+            else {
+                const category = snapshot.docs.map(
+                    prod => prod.data().categoryId
+                )
+                const uniqueCategory = new Set(category)
+                setProdNav([...uniqueCategory].sort())
+            }
+        })
+    }, [])
 
-
-const tipos = data.map(articulo => articulo.tipo)
-
-const unique = new Set(tipos)
-
-export const NavBar = () => (
-    <Navbar className='border border-dark' bg="light " variant="light">
-        <Container>
-
-            <Nav>
-                <NavLink style={{textDecoration: 'none'}}to={`/`}>
+    return (
+        <Navbar className='border border-dark' bg="light " variant="light">
+            <Container>
+                <NavLink style={{ textDecoration: 'none' }} to={`/`}>
                     <Navbar.Brand >My Friendly Pet</Navbar.Brand>
                 </NavLink>
-            </Nav>
-            <Nav className="me-auto">
-                {[...unique].map(item => (
+                {prodNav.map((item) => (
                     <NavLink key={item} className="nav-link" to={`/tipo/${item}`} >
                         {item}
                     </NavLink>
-                ))}
-            </Nav>
-            <CartWidget />
-        </Container>
-    </Navbar>
-)
+                )
+                )}
+                <CartWidget />
+            </Container>
+        </Navbar>
+    )
+}
